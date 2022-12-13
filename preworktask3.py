@@ -6,7 +6,8 @@ def hello_name(username):
 hello_name("Username")
 #2. Write a python function, first_odds that prints the odd numbers from 1-100 and returns nothing
 def odd_numbers(n):
-    return [x for x in range(1, n+1) if x % 2 != 0]
+    return [x for x in range(1, n+1) 
+        if x % 2 != 0]
 
 print(odd_numbers(100))
 
@@ -33,18 +34,18 @@ def leap_year(y):
         return True
     else:
         return False
-print(leap_year(2004))
+print(leap_year(2000))
 
 #5. Write a function to check to see if all numbers in list are consecutive numbers. For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers. 
 # The return should be boolean Type.
 def is_consecutive(nums):
 
-    nums = [1,2,4,5,7]
     sorted_list = sorted(nums)
-    range_list =(range(min(nums), max(nums)+1))
+    range_list =list(range(min(nums), max(nums)+1))
+    print(range_list)
     if sorted_list == range_list:
         return True
     else:
          return False
       
-is_consecutive(nums)
+print(is_consecutive([1,2,4,5]))
